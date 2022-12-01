@@ -28,15 +28,20 @@ Route::apiResource('v1/users', UserController::class);
 Route::apiResource('v1/parkings', ParkingController::class);
 Route::apiResource('v1/parking_places', Parking_placeController::class);
 
-Route::get('v1/parkings/{parking}/parking_places', [Parking_placeController::class, 'index']);
-Route::post('v1/parkings/{parking}/parking_places', [Parking_placeController::class, 'store']);
-Route::get('v1/parkings/{parking}/parking_places?status=available', [Parking_placeController::class, 'available']);
+Route::get('v1/parkings/{parking}/parking_location', [Parking_placeController::class, 'index']);
+Route::post('v1/parkings/{parking}/parking_location', [Parking_placeController::class, 'store']);
+Route::get('v1/parkings/{parking}/parking_location=available', [Parking_placeController::class, 'available']);
 Route::post('v1/parkings/{parking}/tickets', [TicketController::class, 'store']);
 Route::put('v1/parkings/{parking}/tickets/{ticket}', [TicketController::class, 'update']);
-Route::get('v1/parkings/{parking}/estadisticas', [TicketController::class, 'update']);
+Route::get('v1/parkings/{parking}/estadisticas', [TicketController::class, 'estadisticas']);
+Route::get('v1/parkings/{parking}/total', [TicketController::class, 'total']);
+Route::get('v1/parkings/{parking}/estadisticas', [TicketController::class, 'estadisticas']);
+Route::get('v1/parkings/{parking}/total', [TicketController::class, 'total']);
+Route::get('v1/parkings/{parking}/free', [TicketController::class, 'free']);
 
 Route::post('/v1/login',[App\Http\Controllers\api\v1\AuthController::class,'login'])
 ->name('api.login');
+
 
 
 Route::middleware(['auth:sanctum'])->group(function() {

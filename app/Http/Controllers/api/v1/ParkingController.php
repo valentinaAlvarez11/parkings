@@ -29,7 +29,7 @@ class ParkingController extends Controller
     public function store(ParkingStoreRequest $request)
     {
         $parking = Parking::create($request->all());
-        return response()->json(['data' => $parking], 201);   
+        return response()->json(['data' => $parking], 201);
     }
 
     /**
@@ -41,6 +41,8 @@ class ParkingController extends Controller
     public function show(Parking $parking)
     {
         return response()->json(['data' => $parking], 200);
+
+
     }
 
     /**
@@ -53,7 +55,7 @@ class ParkingController extends Controller
     public function update(Request $request, Parking $parking)
     {
         $parking->update($request->all());
-        return response()->json(['data' => $parking], 200); 
+        return response()->json(['data' => $parking], 200);
     }
 
     /**
@@ -67,4 +69,6 @@ class ParkingController extends Controller
         $parking->delete();
         return response(null, 204);
     }
+
+
 }

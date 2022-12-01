@@ -18,6 +18,7 @@ return new class extends Migration
 
             $table->integer('row');
             $table->integer('column');
+            
 
             $table->foreignId('parking_id')->references('id')->on('parkings')
                 ->onDelete('cascade')
