@@ -34,5 +34,20 @@ class OwnersSeeder extends Seeder
             ],
         );
 
+        Owner::create(
+            [
+                'name' => 'Juan Carlos',
+                'birthday' => '2003-10-01',
+                'parking_id' => 3,
+            ],
+        );
+        Owner::create(
+            [
+                'name' => 'Juan fernando',
+                'birthday' => '2003-10-01',
+                'parking_id' => 4,
+            ],
+        );
+
     }
 }

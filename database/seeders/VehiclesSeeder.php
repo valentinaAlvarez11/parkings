@@ -31,6 +31,18 @@ class VehiclesSeeder extends Seeder
             'type_id' => "2",
             'owner_id' => "2",
         ]);
+        Vehicle::create([
+            'license_plate' => "MAS654",
+            'color' => "Naranja",
+            'type_id' => "2",
+            'owner_id' => "3",
+        ]);
+        Vehicle::create([
+            'license_plate' => "NAL638",
+            'color' => "rosado",
+            'type_id' => "2",
+            'owner_id' => "4",
+        ]);
 
     }
 }

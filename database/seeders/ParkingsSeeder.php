@@ -29,5 +29,15 @@ class ParkingsSeeder extends Seeder
             'address' => 'Cra 55 # 11-04',
             'user_id' => 2,
         ]);
+        Parking::create([
+            'name' => 'Parking #3',
+            'address' => 'Cra 34 # 14-04',
+            'user_id' => 2,
+        ]);
+        Parking::create([
+            'name' => 'Parking #4',
+            'address' => 'Cra 45 # 11-45',
+            'user_id' => 2,
+        ]);
     }
 }

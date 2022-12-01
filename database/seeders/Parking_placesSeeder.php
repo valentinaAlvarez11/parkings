@@ -28,9 +28,17 @@ class Parking_placesSeeder extends Seeder
 
         Parking_place::create(
             [
-                'row' => 1,
-                'column' => 2,
-                'parking_id' => 1,
+                'row' => 2,
+                'column' => 1,
+                'parking_id' => 2,
+            ],
+        );
+
+        Parking_place::create(
+            [
+                'row' => 2,
+                'column' => 1,
+                'parking_id' => 2,
             ],
         );
 
@@ -58,6 +66,13 @@ class Parking_placesSeeder extends Seeder
             ],
         );
 
+        Parking_place::create(
+            [
+                'row' => 2,
+                'column' => 1,
+                'parking_id' => 2,
+            ],
+        );
         Parking_place::create(
             [
                 'row' => 2,

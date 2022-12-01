@@ -94,7 +94,6 @@ class ParkingTest extends TestCase
     public function test_unpark_vehicle()
     {
 
-        $this->seed();
         $ticket = Ticket:: first();
         $ticket_id = $ticket->id;
 
